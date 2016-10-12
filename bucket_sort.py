@@ -4,13 +4,15 @@ store numbers in a list
 sort numbers
 
 """
-the_list = []
+
 
 def read_in_file(input_file):
+    the_list = []
     nums = open(input_file)
     index = 0
     for num in nums:
         the_list.append(num)
+    return the_list
 
 def print_list(input_list):
     for num in input_list:
@@ -31,7 +33,7 @@ def get_max(a_list):
             the_max = num
     return the_max
 
-read_in_file('list_of_numbers.txt')
-print_list(the_list)
-min = get_min(the_list)
+get_list = read_in_file('list_of_numbers.txt')
+print_list(get_list)
+min = get_min(get_list)
 print min
