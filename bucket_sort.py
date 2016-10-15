@@ -8,8 +8,6 @@ import numpy
 
 def read_in_file(input_file):
     size = get_max(input_file)
-    print "this is the size "
-    print size
     #the_list = numpy.empty(size,dtype=int)
     the_list = [None] * size
     nums = open(input_file)
