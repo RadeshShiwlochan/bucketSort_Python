@@ -15,8 +15,6 @@ def read_in_file(input_file):
     index = 0
     for num in nums:
         #the_list.append(num)
-        print "this is the num "
-        num
         index = int(num)
         #the_list.insert(index,num)
     return the_list
@@ -25,12 +23,15 @@ def print_list(input_list):
     for num in input_list:
         print num + "  "
 
-def get_min(a_list):
-    index = 0
-    the_min = a_list[index]
-    for num in a_list:
+def get_min(input_file):
+    the_min = 1000000
+    read_frm_file = open(input_file)
+    for num in read_frm_file:
         if num < the_min:
             the_min = num
+    return int(the_min)
+
+
     return the_min
 
 def get_max(input_file):
