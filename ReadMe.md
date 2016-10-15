@@ -1,0 +1,1 @@
+This is a program used to implement bucket Sort, an algorithm used for sorting numbers. In this implementation, as the numbers are being read in from the file, it is inserted at that index thus sorting the numbers as it is being read into the list. 
