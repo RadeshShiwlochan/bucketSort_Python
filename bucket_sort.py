@@ -4,14 +4,21 @@ store numbers in a list
 sort numbers
 
 """
-
+import numpy
 
 def read_in_file(input_file):
-    the_list = []
+    size = get_max(input_file)
+    print "this is the size "
+    print size
+    the_list = numpy.empty(size,dtype=int)
     nums = open(input_file)
     index = 0
     for num in nums:
-        the_list.append(num)
+        #the_list.append(num)
+        print "this is the num "
+        num
+        index = int(num)
+        #the_list.insert(index,num)
     return the_list
 
 def print_list(input_list):
@@ -26,14 +33,13 @@ def get_min(a_list):
             the_min = num
     return the_min
 
-def get_max(a_list):
-    the_max = 0
-    for num in a_list:
+def get_max(input_file):
+    read_frm_file = open(input_file)
+    the_max = -9999
+    for num in read_frm_file:
         if num > the_max:
             the_max = num
-    return the_max
+    return int(the_max)
 
-get_list = read_in_file('list_of_numbers.txt')
-print_list(get_list)
-min = get_min(get_list)
-print min
+read_in_file('list_of_numbers.txt')
+#print_list(get_list)
