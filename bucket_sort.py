@@ -6,7 +6,7 @@ sort numbers
 """
 import numpy
 
-def read_in_file(input_file):
+def bucket_sort(input_file):
     size = get_max(input_file)
     #the_list = numpy.empty(size,dtype=int)
     the_list = [None] * size
@@ -41,5 +41,5 @@ def get_max(input_file):
             the_max = num
     return int(the_max)
 
-get_list = read_in_file('list_of_numbers.txt')
+get_list = bucket_sort('list_of_numbers.txt')
 print_list(get_list)
